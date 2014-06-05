@@ -21,7 +21,7 @@ class Rover
 	end
 
 	def change_direction(turn_direction)
-		current_bearing = BEARINGS.index(@bearing)
+		current_bearing = BEARINGS.index(@bearing)   # simplified version BEARINGS[(BEARINGS.index(@bearing) + (turn_direction == :R ? 1 : -1)) % 4]
 		if turn_direction == "R"
 			current_bearing += 1
 		else
@@ -55,3 +55,6 @@ puts rover1.process_commands("LMLMLMLMM")
 puts rover2.process_commands("MMRMMRMRRM")
 
 #when "puts rover 1" it actually returns log rover1.to_s
+#when you don't have def to_s, it will return the default ruby address
+
+
