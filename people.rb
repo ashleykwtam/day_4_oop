@@ -30,3 +30,8 @@ chris.greeting
 christina = Student.new("Christina")
 christina.greeting
 
+# Question 8
+chris.teach
+christina.learn
+christina.teach		# returns undefined method (NoMethodError)
+# christina cannot access instructor class and call its methods
